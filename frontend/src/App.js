@@ -2,7 +2,6 @@ import './App.css'
 import 'antd/dist/antd.css'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Home from './pages/Home'
-import Test from './pages/Test'
 import Login from './pages/Login'
 import Register from './pages/Register'
 
@@ -17,14 +16,6 @@ function App() {
             element={
               <ProtectedRoute>
                 <Home />
-              </ProtectedRoute>
-            }
-          ></Route>
-          <Route
-            path='/test'
-            element={
-              <ProtectedRoute>
-                <Test />
               </ProtectedRoute>
             }
           ></Route>
