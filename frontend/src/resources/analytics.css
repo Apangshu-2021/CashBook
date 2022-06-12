@@ -1,0 +1,29 @@
+.transactions-count{
+    box-shadow: 0 0 2px grey;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.analytics h4{
+    font-size: 20px;
+    color: gray !important;
+    font-weight: 600;
+}
+
+.analytics h5{
+    font-size: 16px;
+    color: gray !important;
+}
+
+.category-card{
+    padding: 20px;
+    box-shadow: 0 0 2px gray;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .transactions-count{
+        overflow-x: scroll;
+    }
+}
