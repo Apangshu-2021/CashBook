@@ -17,7 +17,12 @@ import Analytics from '../components/Analytics'
 const Home = () => {
   const [showAndEditTransactionModal, setShowAndEditTransactionModal] =
     useState(false)
-  const host = 'http://localhost:5000'
+
+  const host =
+    process.env.NODE_ENV === 'production'
+      ? 'https://cashbook19765.herokuapp.com'
+      : 'http://localhost:5000'
+
   const [loading, setLoading] = useState(false)
   const [transactionsData, setTransactionsData] = useState([])
   const [frequency, setFrequency] = useState('7')

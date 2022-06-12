@@ -3,32 +3,33 @@ import React from 'react'
 import '../resources/analytics.css'
 
 const Analytics = ({ transactions }) => {
-  const totalTransactions = transactions.length
-  const totalIncomeTransactions = transactions.filter(
+  let totalTransactions = transactions.length
+  let totalIncomeTransactions = transactions.filter(
     (transaction) => transaction.type === 'income'
   )
-  const totalExpenseTransactions = transactions.filter(
+  let totalExpenseTransactions = transactions.filter(
     (transaction) => transaction.type === 'expense'
   )
-  const totalIncomeTransactionsPercentage =
+  let totalIncomeTransactionsPercentage =
     (totalIncomeTransactions.length / totalTransactions) * 100
-  const totalExpenseTransactionsPercentage =
+
+  let totalExpenseTransactionsPercentage =
     (totalExpenseTransactions.length / totalTransactions) * 100
-  const totalTurnover = transactions.reduce(
+  let totalTurnover = transactions.reduce(
     (acc, transaction) => acc + transaction.amount,
     0
   )
-  const totalIncomeTurnover = transactions
+  let totalIncomeTurnover = transactions
     .filter((transaction) => transaction.type === 'income')
     .reduce((acc, transaction) => acc + transaction.amount, 0)
-  const totalExpenseTurnover = transactions
+  let totalExpenseTurnover = transactions
     .filter((transaction) => transaction.type === 'expense')
     .reduce((acc, transaction) => acc + transaction.amount, 0)
-  const totalIncomeTurnoverPercentage =
+  let totalIncomeTurnoverPercentage =
     (totalIncomeTurnover / totalTurnover) * 100
-  const totalExpenseTurnoverPercentage =
+  let totalExpenseTurnoverPercentage =
     (totalExpenseTurnover / totalTurnover) * 100
-  const categories = [
+  let categories = [
     'salary',
     'self-employment',
     'investment',
@@ -39,6 +40,26 @@ const Analytics = ({ transactions }) => {
     'medical',
     'tax',
   ]
+
+  totalIncomeTransactionsPercentage = Number.isNaN(
+    totalIncomeTransactionsPercentage
+  )
+    ? 0
+    : totalIncomeTransactionsPercentage
+
+  totalExpenseTransactionsPercentage = Number.isNaN(
+    totalExpenseTransactionsPercentage
+  )
+    ? 0
+    : totalExpenseTransactionsPercentage
+
+  totalIncomeTurnoverPercentage = Number.isNaN(totalIncomeTurnoverPercentage)
+    ? 0
+    : totalIncomeTurnoverPercentage
+
+  totalExpenseTurnoverPercentage = Number.isNaN(totalExpenseTurnoverPercentage)
+    ? 0
+    : totalExpenseTurnoverPercentage
 
   return (
     <div className='analytics'>
