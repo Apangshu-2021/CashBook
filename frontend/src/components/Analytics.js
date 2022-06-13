@@ -74,13 +74,14 @@ const Analytics = ({ transactions }) => {
 
             <div className='progress-bars'>
               <Progress
-                className='mx-5'
+                className='mx-3 my-1'
                 type='circle'
                 strokeColor='green'
                 percent={totalIncomeTransactionsPercentage.toFixed(0)}
               />
 
               <Progress
+                className='mx-3 my-1'
                 type='circle'
                 strokeColor='red'
                 percent={totalExpenseTransactionsPercentage.toFixed(0)}
@@ -98,13 +99,14 @@ const Analytics = ({ transactions }) => {
 
             <div className='progress-bars'>
               <Progress
-                className='mx-5'
+                className='mx-3 my-1'
                 type='circle'
                 strokeColor='green'
                 percent={totalIncomeTurnoverPercentage.toFixed(0)}
               />
 
               <Progress
+                className='mx-3 my-1'
                 type='circle'
                 strokeColor='red'
                 percent={totalExpenseTurnoverPercentage.toFixed(0)}
