@@ -1,4 +1,4 @@
-# CashBook eCommerce Website
+# CashBook Expense Tracker Website
 
 > An expense tracker application built with the MERN stack & Ant Design.
 

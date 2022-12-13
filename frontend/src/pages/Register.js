@@ -21,10 +21,15 @@ const Register = () => {
       setLoading(true)
       await axios.post(`${host}/api/users/register`, values)
       setLoading(false)
-      message.success('Registration successful')
+      message.success(
+        'Registration successful.Kindly Login with the correct credentials'
+      )
+      navigate('/login')
     } catch (error) {
       setLoading(false)
-      message.error('Something went wrong')
+      message.error(
+        'Something went wrong/A user with this email already exists'
+      )
     }
   }
 
