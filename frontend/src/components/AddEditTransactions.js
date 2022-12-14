@@ -11,12 +11,14 @@ const AddEditTransactions = (props) => {
     selectedItemForEdit,
     setSelectedItemForEdit,
   } = props
-  
-  const host =
-  process.env.NODE_ENV === 'production'
-    ? 'https://cashbook19765.herokuapp.com'
-    : 'http://localhost:5000'
-  
+
+  // const host =
+  // process.env.NODE_ENV === 'production'
+  //   ? 'https://cashbook19765.herokuapp.com'
+  //   : 'http://localhost:5000'
+
+  const host = 'http://localhost:5000'
+
   const [loading, setLoading] = useState(false)
 
   const onFinish = async (values) => {
