@@ -18,11 +18,11 @@ const Home = () => {
   const [showAndEditTransactionModal, setShowAndEditTransactionModal] =
     useState(false)
 
-  // const host =
-  //   process.env.NODE_ENV === 'production'
-  //     ? 'https://cashbook19765.herokuapp.com'
-  //     : 'http://localhost:5000'
-  const host = 'http://localhost:5000'
+  const host =
+    process.env.NODE_ENV === 'production'
+      ? 'https://cash-book.vercel.app'
+      : 'http://localhost:5000'
+  //  const host = 'http://localhost:5000'
 
   const [loading, setLoading] = useState(false)
   const [transactionsData, setTransactionsData] = useState([])
